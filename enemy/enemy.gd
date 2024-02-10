@@ -1,12 +1,15 @@
 extends CharacterBody2D
 
-var food_score = 1
-var speed = 3
+@export var food_score = 1
+@export var speed = 3
+
 func _ready():
 	#set_multiplayer_authority(name.to_int())
 	#$DisplayAuthority.visible = is_multiplayer_authority()
 	pass
-
+func set_level(num: int):
+	var global = get_node("/root/Global")
+	global.health -= 10
 func _process(delta):
 	$Sprite2D.scale = Vector2(food_score, food_score)
 	

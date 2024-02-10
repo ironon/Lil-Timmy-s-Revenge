@@ -57,10 +57,9 @@ icon_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 9.0
-offset_top = -259.0
-offset_right = 109.0
-offset_bottom = -159.0
+offset_top = -257.0
+offset_right = 100.0
+offset_bottom = -157.0
 scale = Vector2(8, 8)
 texture = ExtResource("5_c8l54")
 
