@@ -25,15 +25,10 @@ texture = ExtResource("2_skykr")
 
 [node name="playButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.487
-anchor_top = 0.572
-anchor_right = 0.632
-anchor_bottom = 0.674
-offset_left = -209.016
-offset_top = -199.104
-offset_right = -148.376
-offset_bottom = -67.168
+offset_left = 349.0
+offset_top = 261.0
+offset_right = 397.0
+offset_bottom = 288.0
 scale = Vector2(3, 3)
 icon = ExtResource("2_chjxm")
 flat = true
@@ -42,26 +37,43 @@ icon_alignment = 1
 [node name="infoButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.397
-anchor_top = 0.571
-anchor_right = 0.458
-anchor_bottom = 0.673
-offset_left = -114.896
-offset_top = -95.672
-offset_right = -53.744
-offset_bottom = -31.736
+anchor_left = 0.388
+anchor_top = 0.645
+anchor_right = 0.447
+anchor_bottom = 0.745
+offset_left = -20.984
+offset_top = -17.64
+offset_right = -37.296
+offset_bottom = -33.84
 scale = Vector2(3, 3)
 icon = ExtResource("3_loxg2")
 flat = true
 icon_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+<<<<<<< Updated upstream:titlescreen/oldtitlescreen.tscn
 layout_mode = 0
 offset_top = -257.0
 offset_right = 100.0
 offset_bottom = -157.0
+=======
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.129
+anchor_top = 0.138
+anchor_right = 0.873
+anchor_bottom = 0.433
+offset_left = 257.928
+offset_top = 58.384
+offset_right = -261.464
+offset_bottom = -54.056
+grow_horizontal = 2
+grow_vertical = 2
+>>>>>>> Stashed changes:titlescreen/titlescreen.tscn
 scale = Vector2(8, 8)
+pivot_offset = Vector2(26, 8)
 texture = ExtResource("5_c8l54")
+stretch_mode = 3
 
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="infoButton" to="." method="_on_play_button_pressed"]

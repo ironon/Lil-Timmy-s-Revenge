@@ -13,12 +13,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta;
-	$infoButton.scale = Vector2(3*pow(sin(time), 2), 3*pow(sin(time), 2))
+	$TextureRect2.scale = Vector2(8 - 3*pow(sin(time), 2), 8 - 3*pow(sin(time), 2))
 
 
 
 func _on_play_button_pressed():
-	get_tree().change_scene("res://player/game.tscn")  # Replace with function body.
+	get_tree().change_scene_to_file("res://main.tscn")  # Replace with function body.
 
 
 func _on_info_button_pressed():
