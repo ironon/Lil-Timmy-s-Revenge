@@ -18,7 +18,7 @@ func _physics_process(delta ):
 		$Sprite2D.flip_h = true
 	if Input.is_action_pressed("left"):
 		move_vector = move_vector + Vector2(-1, 0)
-		$Sprite2D.flip_h = false;
+		$Sprite2D.flip_h = true
 	if Input.is_action_pressed("down"):
 		move_vector = move_vector + Vector2(0, 1)
 	if Input.is_action_pressed("up"):

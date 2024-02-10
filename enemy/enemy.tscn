@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsm0u4o7lg7sr"]
+[gd_scene load_steps=5 format=3 uid="uid://b62dngatehcyx"]
 
-[ext_resource type="Script" path="res://player/player.gd" id="1_u4j5f"]
-[ext_resource type="Texture2D" uid="uid://dp3sbas5yb7le" path="res://player/lil' timmy-1.png.png" id="2_prfd8"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_w1aco"]
+[ext_resource type="Texture2D" uid="uid://dp3sbas5yb7le" path="res://player/lil' timmy-1.png.png" id="2_8n53v"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_eswml"]
 properties/0/path = NodePath(".:position")
@@ -11,19 +11,17 @@ properties/0/replication_mode = 1
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3cgx"]
 size = Vector2(17, 13)
 
-[node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_u4j5f")
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_w1aco")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_prfd8")
+position = Vector2(1, 1)
+texture = ExtResource("2_8n53v")
 offset = Vector2(0, -5)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_eswml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1.5)
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_q3cgx")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
