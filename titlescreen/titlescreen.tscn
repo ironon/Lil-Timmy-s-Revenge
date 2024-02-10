@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlni7y5hlanlo"]
+[gd_scene load_steps=5 format=3 uid="uid://dlni7y5hlanlo"]
 
 [ext_resource type="Script" path="res://titlescreen/titlescreen.gd" id="1_njw68"]
 [ext_resource type="Texture2D" uid="uid://c80kh0sj0p1a6" path="res://titlescreen/playbutton.png" id="2_chjxm"]
+[ext_resource type="Texture2D" uid="uid://cuiuvq8ysvmhy" path="res://titlescreen/infobutton.png" id="3_loxg2"]
+[ext_resource type="Texture2D" uid="uid://brad863bhi1gk" path="res://titlescreen/title background.png" id="4_tcl4h"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,22 +14,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_njw68")
 
-[node name="play" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 338.0
-offset_top = 183.0
-offset_right = 536.0
-offset_bottom = 407.0
-
-[node name="Button" type="Button" parent="play"]
+[node name="playButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.005
-offset_left = -53.0
-offset_top = -50.0
-offset_right = 54.01
-offset_bottom = 58.0
+anchor_left = 0.487
+anchor_top = 0.572
+anchor_right = 0.632
+anchor_bottom = 0.674
+offset_left = -209.016
+offset_top = -199.104
+offset_right = -148.376
+offset_bottom = -67.168
+scale = Vector2(3, 3)
 icon = ExtResource("2_chjxm")
 flat = true
+icon_alignment = 1
 
-[connection signal="pressed" from="play/Button" to="." method="_on_button_pressed"]
+[node name="infoButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.571
+anchor_right = 0.458
+anchor_bottom = 0.673
+offset_left = -114.896
+offset_top = -95.672
+offset_right = -53.744
+offset_bottom = -31.736
+scale = Vector2(3, 3)
+icon = ExtResource("3_loxg2")
+flat = true
+icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -93.0
+offset_right = 768.0
+offset_bottom = 505.0
+texture = ExtResource("4_tcl4h")
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="infoButton" to="." method="_on_play_button_pressed"]
