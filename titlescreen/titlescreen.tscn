@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlni7y5hlanlo"]
+
+[ext_resource type="Script" path="res://titlescreen/titlescreen.gd" id="1_njw68"]
+[ext_resource type="Texture2D" uid="uid://c80kh0sj0p1a6" path="res://titlescreen/playbutton.png" id="2_chjxm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_njw68")
+
+[node name="play" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 183.0
+offset_right = 536.0
+offset_bottom = 407.0
+
+[node name="Button" type="Button" parent="play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.005
+offset_left = -53.0
+offset_top = -50.0
+offset_right = 54.01
+offset_bottom = 58.0
+icon = ExtResource("2_chjxm")
+flat = true
+
+[connection signal="pressed" from="play/Button" to="." method="_on_button_pressed"]
