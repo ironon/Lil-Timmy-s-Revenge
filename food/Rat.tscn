@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://36vnvirqqnyy"]
+
+[ext_resource type="Texture2D" uid="uid://p837la8wjdh8" path="res://food/rat.png" id="1_kvbsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7smq5"]
+size = Vector2(19.75, 12)
+
+[node name="Food" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.111979, 0.111979)
+texture = ExtResource("1_kvbsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.125, -1)
+shape = SubResource("RectangleShape2D_7smq5")

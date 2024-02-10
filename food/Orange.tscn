@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://biuycwe7oh40x"]
+
+[ext_resource type="Texture2D" uid="uid://l6bv30g6jrhn" path="res://food/orange.png" id="1_c2d7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wm4d"]
+size = Vector2(16, 20)
+
+[node name="Food" type="CharacterBody2D"]
+position = Vector2(-1, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+scale = Vector2(0.175496, 0.175496)
+texture = ExtResource("1_c2d7f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_5wm4d")

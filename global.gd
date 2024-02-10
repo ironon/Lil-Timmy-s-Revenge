@@ -17,7 +17,6 @@ extends Node
 	["Cat", load("res://food/cat.png")],
 	["Human", load("res://food/human.png")]
 	#["Fridge", load("res://food/fridge.png")],
-
 ]
 # Called when the node enters the scene tree for the first time.
 func _ready():

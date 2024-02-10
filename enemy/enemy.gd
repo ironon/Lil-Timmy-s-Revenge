@@ -8,8 +8,7 @@ func _ready():
 	#$DisplayAuthority.visible = is_multiplayer_authority()
 	pass
 func set_level(num: int):
-	var global = get_node("/root/Global")
-	global.health -= 10
+	var level = Global.PROGRESSION[num]
 func _process(delta):
 	$Sprite2D.scale = Vector2(food_score, food_score)
 	

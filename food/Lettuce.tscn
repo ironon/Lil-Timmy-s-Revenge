@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dafq8n56k6iln"]
+
+[ext_resource type="Texture2D" uid="uid://b7eoehus33bou" path="res://food/lettuce.png" id="1_hclmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mkgj"]
+
+[node name="Food" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999998, -2.38419e-07)
+scale = Vector2(0.170939, 0.170939)
+texture = ExtResource("1_hclmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8mkgj")

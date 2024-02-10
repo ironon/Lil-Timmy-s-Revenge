@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwo3wymuqb6go"]
+
+[ext_resource type="Texture2D" uid="uid://d4eomb7fv5fig" path="res://food/apple.png" id="1_d2qvk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei41w"]
+size = Vector2(84.5, 92)
+
+[node name="Food" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d2qvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.75, 16)
+shape = SubResource("RectangleShape2D_ei41w")

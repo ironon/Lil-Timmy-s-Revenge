@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl3xb6fmolmne"]
+
+[ext_resource type="Texture2D" uid="uid://cxpmaxqnbh2v0" path="res://food/chips.png" id="1_nbevn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7v838"]
+size = Vector2(19, 20)
+
+[node name="Food" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -2)
+scale = Vector2(0.149821, 0.149821)
+texture = ExtResource("1_nbevn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_7v838")

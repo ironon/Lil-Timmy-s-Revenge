@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://brtsgmh8gjwl4"]
+
+[ext_resource type="Texture2D" uid="uid://d4e67ium1ylxg" path="res://food/candy.png" id="1_2e04f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei41w"]
+size = Vector2(100, 42)
+
+[node name="Food" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2e04f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 9)
+shape = SubResource("RectangleShape2D_ei41w")

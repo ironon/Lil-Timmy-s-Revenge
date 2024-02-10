@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://7lqahv2ujopo"]
+
+[ext_resource type="Texture2D" uid="uid://wfiv8ho1uxd4" path="res://food/crumbs.png" id="1_5netw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwlw7"]
+
+[node name="Food" type="CharacterBody2D"]
+position = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(1.08919, 1.08919)
+texture = ExtResource("1_5netw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.75, -0.625)
+shape = SubResource("RectangleShape2D_wwlw7")
