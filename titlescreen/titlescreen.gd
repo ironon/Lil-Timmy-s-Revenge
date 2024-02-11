@@ -13,7 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta;
-	$TextureRect2.scale = Vector2(8 - 3*pow(sin(time), 2), 8 - 3*pow(sin(time), 2))
+	$TextureRect2.scale = Vector2(8 - 1*pow(sin(time), 2), 8 - 1*pow(sin(time), 2))
+	$TextureRect2.rotation = sin(time)*0.05
 
 
 

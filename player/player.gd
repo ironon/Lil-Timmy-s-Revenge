@@ -14,6 +14,7 @@ func _process(delta):
 func _physics_process(delta ):
 	var move_vector = Vector2(0, 0)
 	if Input.is_action_pressed("right"):
+		
 		move_vector = move_vector + Vector2(1, 0)
 		$Sprite2D.flip_h = true
 	if Input.is_action_pressed("left"):
