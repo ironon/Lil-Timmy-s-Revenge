@@ -6,30 +6,31 @@ extends Node
 var listofobj = []
 
 func _ready():
-	var vcontainer = get_node("ScrollContainer/VBoxContainer")
-	var hcontainer
-	var image
-	var discription
-	var textobj
-	for i in Global.PROGRESSION_SCENE:
-		textobj = TextureRect.new()
-		textobj.name = "box" + i[0]
-		vcontainer.add_child(textobj)
-		hcontainer = get_node("ScrollContainer/VBoxContainer/box" + i[0])
-		
-		textobj = TextureRect.new()
-		textobj.name = "image" + i[0]
-		hcontainer.add_child(textobj)
-		
-		textobj = TextureRect.new()
-		textobj.name = "discription" + i[0]
-		hcontainer.add_child(textobj)
-		
-		image = get_node("ScrollContainer/VBoxContainer/box" + i[0] + "/" + "image" + i[0])
-		discription = get_node("ScrollContainer/VBoxContainer/box" + i[0] + "/" + "discription" + i[0])
-		print(i[1])
-		image.texture = i[1]
-		listofobj.append([image, discription])
+	pass
+	#var vcontainer = get_node("ScrollContainer/VBoxContainer")
+	#var hcontainer
+	#var image
+	#var discription
+	#var textobj
+	#for i in Global.PROGRESSION:
+		#textobj = TextureRect.new()
+		#textobj.name = "box" + i[0]
+		#vcontainer.add_child(textobj)
+		#hcontainer = get_node("ScrollContainer/VBoxContainer/box" + i[0])
+		#
+		#textobj = TextureRect.new()
+		#textobj.name = "image" + i[0]
+		#hcontainer.add_child(textobj)
+		#
+		#textobj = TextureRect.new()
+		#textobj.name = "discription" + i[0]
+		#hcontainer.add_child(textobj)
+		#
+		#image = get_node("ScrollContainer/VBoxContainer/box" + i[0] + "/" + "image" + i[0])
+		#discription = get_node("ScrollContainer/VBoxContainer/box" + i[0] + "/" + "discription" + i[0])
+		#print(i[1])
+		#image.texture = i[1]
+		#listofobj.append([image, discription])
 		
 
 

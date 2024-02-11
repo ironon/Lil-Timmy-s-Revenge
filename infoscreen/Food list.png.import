@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kchmh1h0rake"
-path="res://.godot/imported/tile.png-5efee60961509f11b847b85a255413ec.ctex"
+uid="uid://biauf8a52qoge"
+path="res://.godot/imported/Food list.png-5768d4abb9fe87d8a2b6173660e5385b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemy/enemyLogic/tile.png"
-dest_files=["res://.godot/imported/tile.png-5efee60961509f11b847b85a255413ec.ctex"]
+source_file="res://infoscreen/Food list.png"
+dest_files=["res://.godot/imported/Food list.png-5768d4abb9fe87d8a2b6173660e5385b.ctex"]
 
 [params]
 

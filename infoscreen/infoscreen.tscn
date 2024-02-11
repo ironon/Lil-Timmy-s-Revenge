@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnd4swd25ew2e"]
+[gd_scene load_steps=6 format=3 uid="uid://cnd4swd25ew2e"]
 
 [ext_resource type="Script" path="res://infoscreen/infoscreen.gd" id="1_6uy4p"]
 [ext_resource type="Texture2D" uid="uid://y8ft3xum2mju" path="res://infoscreen/insidething.png" id="1_ya5v8"]
 [ext_resource type="Texture2D" uid="uid://di7kn52ny7v66" path="res://infoscreen/borderinfo.png" id="2_tm21m"]
 [ext_resource type="Texture2D" uid="uid://bhmgwks714u4k" path="res://infoscreen/pixil-frame-0 (3).png" id="4_l0iil"]
+[ext_resource type="Texture2D" uid="uid://biauf8a52qoge" path="res://infoscreen/Food list.png" id="5_o8wjo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,17 +23,6 @@ offset_right = 770.0
 offset_bottom = 512.0
 texture = ExtResource("1_ya5v8")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 15.0
-offset_right = 746.0
-offset_bottom = 418.0
-vertical_scroll_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-layout_mode = 2
-
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -3.0
@@ -44,15 +34,28 @@ texture = ExtResource("2_tm21m")
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
 offset_left = 49.0
-offset_top = 32.0
+offset_top = 35.0
 offset_right = 89.0
-offset_bottom = 59.0
+offset_bottom = 62.0
 scale = Vector2(2.5, 2.5)
 pivot_offset = Vector2(20, 14)
 icon = ExtResource("4_l0iil")
 flat = true
 icon_alignment = 1
 
-[connection signal="scroll_started" from="ScrollContainer" to="." method="_on_scroll_container_scroll_started"]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_left = 147.0
+offset_top = 34.0
+offset_right = 623.0
+offset_bottom = 398.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
+layout_mode = 2
+texture = ExtResource("5_o8wjo")
+
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="scroll_started" from="ScrollContainer" to="." method="_on_scroll_container_scroll_started"]
