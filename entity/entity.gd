@@ -23,7 +23,10 @@ func good_move_and_collide(velocity: Vector2):
 	
 	if result.get_collider() is CharacterBody2D:
 		if result.get_collider().food_score > food_score:
+			result.get_collider().food_score += food_score
 			die()
 		else:
+			food_score += result.get_collider().food_score
 			result.get_collider().die()
+			
 	

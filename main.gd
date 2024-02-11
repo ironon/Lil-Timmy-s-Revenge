@@ -8,7 +8,7 @@ extends Node
 @export var player : PackedScene
 @export var map : PackedScene
 @export var enemy: PackedScene = preload("res://enemy/enemy.tscn")
-@export var enemies_amount = 5
+@export var enemies_amount = 15
 var map_dimensions = []
 
 func spawn_dude(level: int):
@@ -20,9 +20,11 @@ func spawn_dude(level: int):
 	$Dudes.add_child(new_enemy)
 	new_enemy.position = Vector2(x_pos, y_pos)
 
+func get_random_level():
+	return randi_range(max(0,($Player.food_score / 10) -2), min(14,($Player.food_score / 10) +2))
 func _process(delta) -> void:
 	while $Dudes.get_child_count() <= enemies_amount:
-		spawn_dude(randi_range(0, 10))
+		spawn_dude(get_random_level())
 		
 
 func _ready():
