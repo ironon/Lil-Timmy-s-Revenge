@@ -51,7 +51,7 @@ func load_data():
 	#["Fridge", load("res://food/fridge.png")],
 ]
 
-<<<<<<< Updated upstream
+
 func init_save_data() -> Dictionary:
 	var saved = load_data()
 
@@ -82,7 +82,6 @@ func init_save_data() -> Dictionary:
 
 
 
-=======
 @export var PROGRESSION_SCENE = [
 	["Crumbs", preload("res://food/Crumbs.tscn")],
 	["Chips", preload("res://food/Chip.tscn")],
@@ -101,7 +100,7 @@ func init_save_data() -> Dictionary:
 	["Human", preload("res://food/Human.tscn")]
 	#["Fridge", load("res://food/fridge.png")],
 ]
->>>>>>> Stashed changes
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
