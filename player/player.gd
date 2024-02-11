@@ -1,30 +1,22 @@
-extends CharacterBody2D
+extends Entity
 
-var food_score = 1
-var speed = 3
-func _ready():
-	#set_multiplayer_authority(name.to_int())
-	#$DisplayAuthority.visible = is_multiplayer_authority()
-	pass
 
-func _process(delta):
-	$Sprite2D.scale = Vector2(food_score, food_score)
-	
-	
 func _physics_process(delta ):
+	
 	var move_vector = Vector2(0, 0)
 	if Input.is_action_pressed("right"):
 		
 		move_vector = move_vector + Vector2(1, 0)
-		$Sprite2D.flip_h = true
+		$Character.flip_h = true
 	if Input.is_action_pressed("left"):
 		move_vector = move_vector + Vector2(-1, 0)
-		$Sprite2D.flip_h = false;
+		$Character.flip_h = false;
 	if Input.is_action_pressed("down"):
 		move_vector = move_vector + Vector2(0, 1)
 	if Input.is_action_pressed("up"):
 		move_vector = move_vector + Vector2(0, -1)
-	move_and_collide(move_vector.normalized() * speed)
+	var a_velocity = move_vector.normalized() * speed
+	move_and_collide(a_velocity)
 #func _physics_process(delta):
 	#if not is_multiplayer_authority(): return
 #
