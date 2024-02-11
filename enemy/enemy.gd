@@ -26,7 +26,7 @@ func get_random_idle_point():
 	return position + Vector2(randi_range(-10, 10), randi_range(-10, 10))
 func _physics_process(delta):
 	var bodies = $ViewDistance.get_overlapping_bodies()
-	print(attacking)
+	
 	
 	for body in bodies:
 		if $ViewDistance.get_overlapping_bodies().has(attacking_entity):
@@ -48,9 +48,9 @@ func _physics_process(delta):
 	
 		var movement_vector = (attacking_entity.position - position).normalized()
 		if attacking == 1:
-			move_and_collide(movement_vector * speed)
+			super.good_move_and_collide(movement_vector * speed)
 		else:
-			move_and_collide(movement_vector * speed * -1)
+			super.good_move_and_collide(movement_vector * speed * -1)
 	
 #func b(delta ):
 	#var move_vector = Vector2(0, 0)

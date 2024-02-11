@@ -13,6 +13,17 @@ func touched_entity(entity: Entity):
 	
 func _physics_process(delta):
 	$Character.scale = Vector2(default_scale + food_score, default_scale + food_score)
-	
 
+func die():
+	queue_free()
+func good_move_and_collide(velocity: Vector2):
+	var result = move_and_collide(velocity)
+	if result == null:
+		return
+	
+	if result.get_collider() is CharacterBody2D:
+		if result.get_collider().food_score > food_score:
+			die()
+		else:
+			result.get_collider().die()
 	

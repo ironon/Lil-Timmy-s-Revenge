@@ -16,7 +16,7 @@ func _physics_process(delta ):
 	if Input.is_action_pressed("up"):
 		move_vector = move_vector + Vector2(0, -1)
 	var a_velocity = move_vector.normalized() * speed
-	move_and_collide(a_velocity)
+	super.good_move_and_collide(a_velocity)
 #func _physics_process(delta):
 	#if not is_multiplayer_authority(): return
 #

@@ -2,14 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://w0srxjy7qcpe" path="res://food/carrot.png" id="1_oxg4p"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei41w"]
-size = Vector2(44, 129)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivkba"]
+size = Vector2(6, 18)
 
 [node name="Food" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -2.38419e-07)
+scale = Vector2(0.14388, 0.14388)
 texture = ExtResource("1_oxg4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-15, -8.5)
-shape = SubResource("RectangleShape2D_ei41w")
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ivkba")

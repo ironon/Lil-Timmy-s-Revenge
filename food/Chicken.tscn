@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://whgtgl3b10gp" path="res://food/chicken happy.png" id="1_pgkx4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_35kwc"]
-size = Vector2(22, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh4sg"]
+size = Vector2(21, 20)
 
 [node name="Food" type="CharacterBody2D"]
 
@@ -13,4 +13,5 @@ scale = Vector2(1.14453, 1.14453)
 texture = ExtResource("1_pgkx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_35kwc")
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_fh4sg")
