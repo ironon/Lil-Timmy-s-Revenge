@@ -7,8 +7,29 @@ extends Node
 
 @export var player : PackedScene
 @export var map : PackedScene
+@export var enemy: PackedScene = preload("res://enemy/enemy.tscn")
+@export var enemies_amount = 5
+var map_dimensions = []
 
+func spawn_dude(level: int):
+	var new_enemy = enemy.instantiate()
+	new_enemy.set_level(level)
 
+	var x_pos = int(map_dimensions[0] * 16 * randf())
+	var y_pos = int(map_dimensions[1] * 16* randf())
+	$Dudes.add_child(new_enemy)
+	new_enemy.position = Vector2(x_pos, y_pos)
+
+func _process(delta) -> void:
+	while $Dudes.get_child_count() <= enemies_amount:
+		spawn_dude(randi_range(0, 10))
+		
+
+func _ready():
+	var area: Rect2i = $Map.get_used_rect()
+	map_dimensions = [area.size[0], area.size[1]] ##idk why i did this
+	spawn_dude(3)
+	
 ## Server
 #func _on_host_button_pressed():
 	#upnp_setup()

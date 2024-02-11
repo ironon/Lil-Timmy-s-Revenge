@@ -10,8 +10,9 @@ func set_level(num: int):
 	var level = Global.PROGRESSION_SCENE[num][1].instantiate()
 	level.name = "Character"
 	add_child(level)
+	set_editable_instance(level, true) ## there are no hacks in ba sing se move along this is perfectly valid
 	level.get_node("CollisionShape2D").reparent(self)
-	print(get_children())
+
 	scale = Vector2(default_scale, default_scale);
 	speed = (num) + 1
 	food_score = num * 10
@@ -25,19 +26,18 @@ func get_random_idle_point():
 	return position + Vector2(randi_range(-10, 10), randi_range(-10, 10))
 func _physics_process(delta):
 	var bodies = $ViewDistance.get_overlapping_bodies()
+	print(attacking)
 	
-	attacking = 0
 	for body in bodies:
+		if $ViewDistance.get_overlapping_bodies().has(attacking_entity):
+			continue
 		if body == self:
 			# narsacistic area2d dude wtf
 			continue
 		if body is CharacterBody2D:
 			#print(body)
 			attacking_entity = body
-			if body.get_script() == null:
-				## i do not know how this edge case happens but yk frick it
-				
-				continue
+			
 			if (body.food_score > food_score):
 				# run for your life
 				attacking = -1

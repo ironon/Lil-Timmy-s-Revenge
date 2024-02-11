@@ -77,3 +77,5 @@ scale = Vector2(3, 3)
 
 [node name="Enemy" parent="." instance=ExtResource("6_6q0x7")]
 position = Vector2(1392, 219)
+
+[node name="Dudes" type="Node" parent="."]
