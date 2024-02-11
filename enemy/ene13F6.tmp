@@ -16,15 +16,6 @@ food_score = 5
 speed = 2
 default_scale = 2
 
-[node name="Score" type="RichTextLabel" parent="."]
-z_index = 10
-offset_left = -4.0
-offset_top = -33.0
-offset_right = 148.0
-offset_bottom = 7.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "1"
-
 [node name="ViewDistance" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ViewDistance"]
@@ -32,8 +23,3 @@ shape = SubResource("CircleShape2D_rb2m2")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_eswml")
-
-[node name="Chasing" type="Timer" parent="."]
-wait_time = 5.0
-
-[connection signal="timeout" from="Chasing" to="." method="_on_chasing_timeout"]

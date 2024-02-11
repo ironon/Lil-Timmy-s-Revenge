@@ -16,6 +16,15 @@ script = ExtResource("1_u4j5f")
 food_score = 2
 speed = 5
 
+[node name="Score" type="RichTextLabel" parent="."]
+z_index = 10
+offset_left = -4.0
+offset_top = -33.0
+offset_right = 148.0
+offset_bottom = 7.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "1"
+
 [node name="Character" type="Sprite2D" parent="."]
 texture = ExtResource("2_prfd8")
 offset = Vector2(0, -5)

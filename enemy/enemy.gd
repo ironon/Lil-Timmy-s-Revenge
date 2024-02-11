@@ -6,6 +6,7 @@ var idle_position = null
 func _ready():
 	if get_node_or_null("Character") == null:
 		set_level(0);
+	$Chasing.wait_time = randi_range(4,14)
 func set_level(num: int):
 	var level = Global.PROGRESSION_SCENE[num][1].instantiate()
 	level.name = "Character"
@@ -14,8 +15,10 @@ func set_level(num: int):
 	level.get_node("CollisionShape2D").reparent(self)
 
 	scale = Vector2(default_scale, default_scale);
-	speed = (num) + 1
-	food_score = num * 10
+	#speed = (num) + 1
+	food_score = (num * 50)
+	if num == 0:
+		food_score = 1
 
 
 
@@ -25,6 +28,7 @@ func touched_entity(entity: Entity):
 func get_random_idle_point():
 	return position + Vector2(randi_range(-10, 10), randi_range(-10, 10))
 func _physics_process(delta):
+	super._physics_process(0)
 	var bodies = $ViewDistance.get_overlapping_bodies()
 	
 	
@@ -37,7 +41,7 @@ func _physics_process(delta):
 		if body is CharacterBody2D:
 			#print(body)
 			attacking_entity = body
-			
+			$Chasing.start()
 			if (body.food_score > food_score):
 				# run for your life
 				attacking = -1
@@ -73,3 +77,8 @@ func _physics_process(delta):
 	
 
 
+
+
+func _on_chasing_timeout():
+	attacking = 0
+	attacking_entity = null

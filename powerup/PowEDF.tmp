@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://csqbc148v4owi"]
+
+[ext_resource type="Script" path="res://powerup/Powerup.gd" id="1_7usp6"]
+[ext_resource type="Texture2D" uid="uid://yb5kn3s347en" path="res://powerup/powerup.png" id="1_lc6ld"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_exswq"]
+radius = 9.0
+
+[node name="PowerUp" type="CharacterBody2D"]
+script = ExtResource("1_7usp6")
+food_score = null
+speed = null
+default_scale = null
+
+[node name="Character" type="Sprite2D" parent="."]
+scale = Vector2(0.296875, 0.296875)
+texture = ExtResource("1_lc6ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_exswq")
