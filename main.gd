@@ -30,7 +30,7 @@ func spawn_dude(level: int):
 	var y_pos = int(map_dimensions[1] * 16* randf())
 	
 	new_enemy.position = Vector2(x_pos, y_pos)
-
+# tis needs to be moved into player
 func get_random_level():
 	return randi_range(max(0,($Player.food_score / 10) -2), min(14,int(($Player.food_score / 10) +1)))
 func _process(delta) -> void:

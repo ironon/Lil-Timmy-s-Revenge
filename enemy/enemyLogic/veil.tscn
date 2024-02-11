@@ -1,11 +1,73 @@
-[gd_scene format=3 uid="uid://dv7thhpb6tgvx"]
+[gd_scene load_steps=7 format=3 uid="uid://dv7thhpb6tgvx"]
+
+[ext_resource type="Texture2D" uid="uid://b67u1wd2wdckt" path="res://enemy/enemyLogic/Top side.png" id="1_5tj47"]
+[ext_resource type="Texture2D" uid="uid://dpmtlj733ox34" path="res://enemy/enemyLogic/Bottom side.png" id="2_cbis4"]
+[ext_resource type="Texture2D" uid="uid://xlxbi5u1d221" path="res://enemy/enemyLogic/Left side.png" id="3_tpj61"]
+[ext_resource type="Texture2D" uid="uid://dvj5a6ovu6o20" path="res://enemy/enemyLogic/Right side.png" id="4_ktllp"]
+[ext_resource type="Texture2D" uid="uid://boa6u3pqcckgr" path="res://enemy/enemyLogic/New Piskel.png" id="5_mei7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tees"]
+size = Vector2(74.2596, 95.4955)
 
 [node name="Veil" type="Node2D"]
 metadata/_edit_vertical_guides_ = [202530.0]
 metadata/_edit_horizontal_guides_ = [162340.0]
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(666, 342)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(203998, 158347)
-scale = Vector2(-653.91, nan)
+[node name="TopSide" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(785, -1767)
+scale = Vector2(39, 29.955)
+shape = SubResource("RectangleShape2D_5tees")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/TopSide"]
+offset_left = -37.1282
+offset_top = -47.5046
+offset_right = 2.87178
+offset_bottom = -7.50459
+scale = Vector2(1.85507, 2.39671)
+texture = ExtResource("1_5tj47")
+
+[node name="BottomSide" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(782, 3945)
+scale = Vector2(39, 29.955)
+shape = SubResource("RectangleShape2D_5tees")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/BottomSide"]
+offset_left = -37.1538
+offset_top = -47.538
+offset_right = 2.84615
+offset_bottom = -7.53798
+scale = Vector2(1.85409, 2.39473)
+texture = ExtResource("2_cbis4")
+
+[node name="LeftSide" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2116, 1082)
+scale = Vector2(39, 29.955)
+shape = SubResource("RectangleShape2D_5tees")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/LeftSide"]
+offset_left = -37.3333
+offset_top = -47.805
+offset_right = 2.66668
+offset_bottom = -7.80503
+scale = Vector2(1.86197, 2.37184)
+texture = ExtResource("3_tpj61")
+
+[node name="RightSide" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3685, 1088)
+scale = Vector2(39, 29.955)
+shape = SubResource("RectangleShape2D_5tees")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/RightSide"]
+offset_left = -37.1538
+offset_top = -48.1055
+offset_right = 2.84616
+offset_bottom = -8.10549
+scale = Vector2(1.85501, 2.39067)
+texture = ExtResource("4_ktllp")
+
+[node name="NewPiskel" type="Sprite2D" parent="."]
+position = Vector2(-2596, 1074)
+texture = ExtResource("5_mei7h")
