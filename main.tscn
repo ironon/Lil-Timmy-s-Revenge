@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_qmj53"]
 [ext_resource type="PackedScene" uid="uid://dsm0u4o7lg7sr" path="res://player/player.tscn" id="2_mm035"]
-[ext_resource type="Texture2D" uid="uid://kchmh1h0rake" path="res://tile.png" id="4_ygffm"]
+[ext_resource type="Texture2D" uid="uid://kchmh1h0rake" path="res://enemy/enemyLogic/tile.png" id="4_ygffm"]
 [ext_resource type="Texture2D" uid="uid://b1clqvrhukiqp" path="res://tile_corner.png" id="5_li8t7"]
 [ext_resource type="Texture2D" uid="uid://c002mx8vfdf8l" path="res://tile_side.png" id="6_57pwo"]
 

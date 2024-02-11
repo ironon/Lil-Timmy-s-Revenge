@@ -69,4 +69,4 @@ texture = ExtResource("5_c8l54")
 stretch_mode = 3
 
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="infoButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="infoButton" to="." method="_on_info_button_pressed"]

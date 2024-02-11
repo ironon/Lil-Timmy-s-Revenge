@@ -23,4 +23,4 @@ func _on_play_button_pressed():
 
 
 func _on_info_button_pressed():
-	get_tree().change_scene("res://player/info.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://infoscreen/infoscreen.tscn") # Replace with function body.
