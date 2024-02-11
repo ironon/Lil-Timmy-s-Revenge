@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dv7thhpb6tgvx"]
+
+[node name="Veil" type="Node2D"]
+metadata/_edit_vertical_guides_ = [202530.0]
+metadata/_edit_horizontal_guides_ = [162340.0]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(203998, 158347)
+scale = Vector2(-653.91, nan)
