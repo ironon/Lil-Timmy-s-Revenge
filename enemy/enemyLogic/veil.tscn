@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dpmtlj733ox34" path="res://enemy/enemyLogic/Bottom side.png" id="2_cbis4"]
 [ext_resource type="Texture2D" uid="uid://xlxbi5u1d221" path="res://enemy/enemyLogic/Left side.png" id="3_tpj61"]
 [ext_resource type="Texture2D" uid="uid://dvj5a6ovu6o20" path="res://enemy/enemyLogic/Right side.png" id="4_ktllp"]
-[ext_resource type="Texture2D" uid="uid://boa6u3pqcckgr" path="res://enemy/enemyLogic/New Piskel.png" id="5_mei7h"]
+[ext_resource type="Texture2D" uid="uid://c0mkg32lldu4n" path="res://enemy/enemyLogic/New Piskel.png" id="5_mei7h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tees"]
 size = Vector2(74.2596, 95.4955)
